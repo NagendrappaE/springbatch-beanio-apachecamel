@@ -1,0 +1,158 @@
+<beanio xmlns="http://www.beanio.org/2012/03"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+	<stream name="enbdpaymentStream" format="csv">
+
+		<record name="fileHeader" minOccurs="1" maxOccurs="1" order="1"
+			class="com.evolvus.fluxclaims.bean.FileHeader">
+			<field name="fileHeaderIdentifier" />
+			<field name="filereference" />
+			<field name="subscriberID" />
+			<field name="totalNumOfBatches" />
+			<field name="totalNumberOfLines" />
+			<field name="fileCreationDt" />
+			<field name="fileCreationTime" />
+			<field name="fileAutherizatioType" />
+			<field name="ackMode" />
+			<field name="ackReceivngMailIds" />
+			<field name="ackFormat" />
+
+
+		</record>
+		<record name="batchHeader" minOccurs="0" maxOccurs="1"
+			order="2" class="com.evolvus.fluxclaims.bean.BatchHeader">
+			<field name="batchHdrIdentifier" />
+
+			<field name="batchTxnRef" />
+
+			<field name="workFlowIdentifier" />
+
+			<field name="txnRecCount" />
+
+			<field name="recordSpotter" />
+
+			<field name="debitLevelFlg" />
+
+			<field name="txnTypeFlg" />
+
+			<field name="debitIBANnumber" />
+
+			<field name="debitCurency" />
+
+			<field name="debitActCountry" />
+
+			<field name="drCrAccountName" />
+
+			<field name="drCrAccountAdrss" />
+
+			<field name="drCrBICode" />
+
+			<field name="fixedDebit" />
+
+			<field name="paylaterDate" />
+
+			<field name="authorizationType" />
+
+			<field name="specialDealFlg" />
+
+			<field name="specialDealRef" />
+
+			<field name="benificiaryRegFLg" />
+
+			<field name="adviceFlg" />
+
+			<field name="h2hAdviceMode" />
+
+			<field name="advcingMailId" />
+
+			<field name="advicingFormate" />
+
+			<field name="invoiceRecordExist" />
+
+			<field name="totalInvoiceRecordCount" />
+
+			<field name="invoiceLabel1" />
+
+			<field name="invoiceLabel2" />
+
+			<field name="invoiceLabel3" />
+
+			<field name="invoiceLabel4" />
+
+			<field name="invoiceLabel5" />
+
+		</record>
+		<record name="transcationRecord" minOccurs="1" maxOccurs="1"
+			order="3" class="com.evolvus.fluxclaims.bean.TranscationalRecord">
+			<field name="txnRecordIdent" />
+
+			<field name="txnReference" />
+
+			<field name="crCode" />
+
+			<field name="crName" />
+
+			<field name="crEmailId" />
+
+
+			<field name="crMobNum" />
+
+			<field name="crIBANNumber" />
+
+			<field name="crPayMode" />
+
+			<field name="crAmount" />
+
+			<field name="crPayCurency" />
+
+			<field name="crAddress" />
+
+			<field name="crCountry" />
+
+			<field name="crbankName" />
+
+			<field name="crBankAddr" />
+
+			<field name="crBICode" />
+
+			<field name="crPayableCountry" />
+
+			<field name="paymentDetailsForBenifcr" />
+
+			<field name="crPayableCity" />
+
+			<field name="deliveryMode" />
+
+			<field name="txnCharges" />
+
+			<field name="txnPurpuseTypes" />
+
+			<field name="txnPaymentType" />
+
+			<field name="interMediateBank1" />
+
+			<field name="interMediateBank1Addr" />
+
+			<field name="interMediate1BICCode" />
+
+			<field name="interMediateBank1SortCode" />
+
+			<field name="interMediatebank1RouteCode" />
+
+			<field name="interMediateBank2" />
+
+			<field name="interMediateBank2Addr" />
+
+			<field name="interMediate2BICCode" />
+
+			<field name="interMediateBank2SortCode" />
+
+			<field name="interMediatebank2RouteCode" />
+
+
+		</record>
+	</stream>
+
+
+</beanio>
